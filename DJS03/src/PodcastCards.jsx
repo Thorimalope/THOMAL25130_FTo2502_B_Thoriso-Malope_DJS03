@@ -1,12 +1,12 @@
 
 export default function PodcastCard(props) {
-    var readableDate = new Date(props.updated).toLocaleDateString("en-US", {
+    const readableDate = new Date(props.updated).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric"
     });
 
-    var genreTags = props.genres.map(function (genre, index) {
+    const genreTags = props.genres.map(function (genre, index) {
         return <span key={index} className="genre">{genre}</span>;
     });
 
