@@ -24,14 +24,15 @@ export default function App() {
 
 
     function getGenresByIds(ids) {
-        const result = [];
+    let result = [];
 
-        for (const i = 0; i < ids.length; i++) {
-            const match = genres.find(function (genre) {
-                return genre.id === ids[i];
+        for (let i = 0; i < ids.length; i++) {
+            let match = genres.find(function (genre) {
+            return genre.id === ids[i];
             });
+
             if (match) {
-                result.push(match.title);
+            result.push(match.title);
             }
         }
 
@@ -56,7 +57,7 @@ export default function App() {
         <>
             <Header/>
             <main id="podcast-grid" className="grid">
-                {PodcastCard}
+                {podcastCards}
             </main>
         </>    
     )
